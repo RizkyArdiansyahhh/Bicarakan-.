@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-md bg-light px-3 fixed-top shadow-lg">
+        <div class="container-fluid">
+          <img src="img/logo.png" alt="" style="height: 80px" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <button
+                type="button"
+                class="btn btn-warning rounded-pill btn-lg text-light fw-bold py-3"
+              >
+                Jadwalkan Konsultasi
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- AKHIR HEADER -->
+    <!-- HERO SECTION -->
+    <section
+      class="px-5"
+      style="
+        margin-top: 6rem;
+        background: url(img/background.jpg);
+        background-size: cover;
+        padding-block: 5rem;
+      "
+    >
+      <div
+        class="container-fluid p-4 rounded-3"
+        style="
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          background-color: transparent;
+          backdrop-filter: blur(25px);
+          border: rgba(255, 255, 255, 0.2);
+        "
+      >
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <!-- USERNAME -->
+              <div class="form-floating mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputusername"
+                  required
+                />
+                <label for="inputusername">Username</label>
+              </div>
+              <!-- KATA SANDI -->
+              <div class="form-floating mb-4">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputpassword"
+                  aria-describedby="katasandiHelp"
+                  required
+                />
+                <label for="inputpassword">Kata Sandi</label>
+                <div id="katasandiHelp" class="form-text fw-semibold">
+                  Panjang kata sandi haruslah 8-20 karakter.
+                </div>
+              </div>
+              <!-- ULANGI KATA SANDI -->
+              <div class="form-floating mb-4">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputpassword"
+                  required
+                />
+                <label for="inputpassword">Ulangi kata Sandi</label>
+              </div>
+              <!-- NAMA DEPAN DAN NAMA BELAKANG -->
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputnamaDepan"
+                      required
+                    />
+                    <label for="inputnamaDepan">Nama Depan</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputnamaBelakang"
+                      required
+                    />
+                    <label for="inputnamaBelakang">Nama Belakang</label>
+                  </div>
+                </div>
+              </div>
+              <!-- EMAIL DAN NO HP -->
+              <div class="row">
+                <div class="col-12 col-md-7">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputemail"
+                      required
+                    />
+                    <label for="inputemailt">Email</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-5">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputnomorhandphone"
+                      required
+                    />
+                    <label for="inputnomorhandphone">HP</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <!-- ALAMAT -->
+              <div class="form-floating mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputalamat"
+                  required
+                />
+                <label for="inputalamat">Alamat</label>
+              </div>
+              <!-- ALAMAT LANJUTAN -->
+              <div class="form-floating mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputalamatlanjutan"
+                />
+                <label for="inputalamatlanjutan">Alamat lanjutan</label>
+              </div>
+              <!-- RT, RW, DAN KELURAHAN -->
+              <div class="row">
+                <div class="col-3">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputrt"
+                      required
+                    />
+                    <label for="inputrt">RT</label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inputrw"
+                      required
+                    />
+                    <label for="inputrw">RW</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputkelurahan"
+                      required
+                    />
+                    <label for="inputkelurahan">Kelurahan</label>
+                  </div>
+                </div>
+              </div>
+              <!-- KECAMATAN DAN KOTA -->
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputkecamatan"
+                      required
+                    />
+                    <label for="inputkecamatan">Kecamatan</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-floating mb-4">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputkota"
+                      required
+                    />
+                    <label for="inputkota">Kota</label>
+                  </div>
+                </div>
+              </div>
+              <!-- PILIH PROVINSI -->
+              <select
+                class="form-select mb-4"
+                aria-label="Default select example"
+                required
+              >
+                <option value="" disabled selected>Pilih Provinsi</option>
+                <option value="1">Aceh</option>
+                <option value="2">Sumatra Utara</option>
+                <option value="3">Sumatra Barat</option>
+                <option value="4">Riau</option>
+                <option value="5">Jambi</option>
+                <option value="6">Sumatra Selatan</option>
+                <option value="7">Bengkulu</option>
+                <option value="8">Lampung</option>
+                <option value="9">Kepulauan Bangka Belitung</option>
+                <option value="10">Kepulauan Riau</option>
+                <option value="11">Daerah Khusus Ibukota Jakarta</option>
+                <option value="12">Jawa Barat</option>
+                <option value="13">Jawa Tengah</option>
+                <option value="14">Daerah Istimewa Yogyakarta</option>
+                <option value="15">Jawa Timur</option>
+                <option value="16">Banten</option>
+                <option value="17">Bali</option>
+                <option value="18">Nusa Tenggara Barat</option>
+                <option value="19">Nusa Tenggara Timur</option>
+                <option value="20">Kalimantan Barat</option>
+                <option value="21">Kalimantan Tengah</option>
+                <option value="22">Kalimantan Selatan</option>
+                <option value="23">Kalimantan Timur</option>
+                <option value="24">Kalimantan Utara</option>
+                <option value="25">Sulawesi Utara</option>
+                <option value="26">Sulawesi Tengah</option>
+                <option value="27">Sulawesi Selatan</option>
+                <option value="28">Sulawesi Tenggara</option>
+                <option value="29">Gorontalo</option>
+                <option value="30">Sulawesi Barat</option>
+                <option value="31">Maluku</option>
+                <option value="32">Maluku Utara</option>
+                <option value="33">Papua</option>
+                <option value="34">Papua Barat</option>
+                <option value="35">Papua Selatan</option>
+                <option value="36">Papua Tengah</option>
+                <option value="37">Papua Pegunungan</option>
+                <option value="38">Papua Barat Daya</option>
+              </select>
+            </div>
+            <div class="container d-flex justify-content-between px-0">
+              <button
+                type="button"
+                class="btn btn-outline-warning fw-bold"
+                style="color: #0a203e"
+                onclick="location.href='index.html'"
+              >
+                Balik
+              </button>
+              <button
+                type="submit"
+                class="btn btn-outline-warning fw-bold"
+                style="color: #0a203e"
+              >
+                Daftar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- AKHIR HERO SECTION -->
+    <!-- FOOTER -->
+    <footer class="pt-5 bg-light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="row mb-4">
+              <div class="col">
+                <h3 class="fw-bold mb-3" style="color: #0a203e">bicarakan.</h3>
+                <p style="color: #0a203e">
+                  Untuk Indonesia yang Lebih Sehat Mental Bicarakan
+                  menghubungkan setiap orang yang ingin menemukan jalan keluar
+                  atas masalahnya dengan psikolog profesional
+                </p>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col" style="color: #0a203e">
+                <h3 class="mb-3 fw-bold">Hubungi Kami</h3>
+                <p class="mb-0">
+                  <a
+                    class="link-opacity-50-hover fw-normal"
+                    href="#"
+                    style="color: #0a203e; text-decoration: none"
+                    >Customer Service</a
+                  >
+                </p>
+                <p>
+                  <a
+                    class="link-opacity-50-hover fw-normal"
+                    href="#"
+                    style="color: #0a203e; text-decoration: none"
+                    >Partnership</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <h3 class="fw-bold mb-3" style="color: #0a203e">Pelajari</h3>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >FAQ</a
+              >
+            </p>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >Panduan Konseling</a
+              >
+            </p>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >Peraturan Konseling</a
+              >
+            </p>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >Peraturan Konseling Tatap Muka</a
+              >
+            </p>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >Privacy Policy</a
+              >
+            </p>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >Garansi efisiensi konseling</a
+              >
+            </p>
+            <p class="mb-0">
+              <a
+                class="link-opacity-50-hover fw-normal"
+                href="#"
+                style="color: #0a203e; text-decoration: none"
+                >Indonesia Sehat Mental</a
+              >
+            </p>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <h3 class="fw-bold mb-3" style="color: #0a203e">Donwload App di</h3>
+            <div class="row">
+              <div class="col-12 col-6 mb-3">
+                <img class="img-fluid" src="img/footer1.svg" alt="App Store" />
+              </div>
+              <div class="col-12 col-6">
+                <img
+                  class="img-fluid"
+                  src="img/footer2.svg"
+                  alt="Playstore Store"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mb-3">
+            <h3 class="fw-bold mb-3" style="color: #0a203e">
+              Metode Pembayaran
+            </h3>
+            <img
+              class="img-fluid"
+              style="height: 200px"
+              src="img/footer3.png"
+              alt="Metode pembayaran"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- AKHIR FOOTER -->
+
+    <!-- SCRIPT JAVASCRIPT BOOTSRTAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- KODE JAVASCRIPT UNTUK VALIDATION -->
+    <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <!-- AKHIR KODE JAVASCRIPT UNTUK VALIDATION -->
+  </body>
+</html>
